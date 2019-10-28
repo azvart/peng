@@ -26,12 +26,12 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Start Bootstrap </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        <a href="firstarticle" class="list-group-item list-group-item-action bg-light">Main Article</a>
+        <a href="secondarticle" class="list-group-item list-group-item-action bg-light">Second</a>
+        <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">Third</a>
+        <a href="site" class="list-group-item list-group-item-action bg-light">Четвертая статья</a>
+        <a href="five" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="six" class="list-group-item list-group-item-action bg-light">Status</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
