@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\productRequest;
+use App\product;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function postIndex(productRequest $r){
+        dd($r->all());
+        $r['showhide']=1;
+        $r['picture'] = '';
+        $r['user_id'] = Auth::user()->id;
+        $r['status'] = 'new';
+        Product::create($r->all());
+        return redirect()->back();
     }
 }
