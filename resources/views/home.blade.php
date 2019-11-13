@@ -1,5 +1,11 @@
 @extends('layouts.base')
-
+@section('scripts')
+ @parent
+ <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+ <script >
+   CKEDITOR.replace('body');
+ </script>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -68,9 +74,9 @@
   <div class="form-group">
     <select class="custom-select"name='category' id='category' >
       <option value="">Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      @foreach($cats as $one)
+      <option value="{{$one->id}}">{{$one->name}}</option>
+      @endforeach
     </select>
     <div class="invalid-feedback">Example invalid custom select feedback</div>
   </div>

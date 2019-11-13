@@ -30,7 +30,7 @@
         <a href="secondarticle" class="list-group-item list-group-item-action bg-light">Second</a>
         <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">Third</a>
         <a href="site" class="list-group-item list-group-item-action bg-light">Четвертая статья</a>
-        <a href="five" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <a href="home" class="list-group-item list-group-item-action bg-light">Home</a>
         <a href="six" class="list-group-item list-group-item-action bg-light">Status</a>
       </div>
     </div>
@@ -121,7 +121,8 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-
+@section('scripts')
+@show
 </body>
 
 </html>

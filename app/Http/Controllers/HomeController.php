@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\productRequest;
+use App\Category;
 use App\product;
 
 class HomeController extends Controller
@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $cats = Category::all();
+        return view('home',compact('cats'));
     }
     public function postIndex(productRequest $r){
         dd($r->all());
