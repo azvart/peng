@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Ноя 06 2019 г., 21:54
+-- Время создания: Ноя 13 2019 г., 21:33
 -- Версия сервера: 8.0.12
 -- Версия PHP: 7.2.10
 
@@ -30,9 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(7, 'Mikrovolnovki', NULL, NULL),
+(8, 'Holodilniki', NULL, NULL),
+(10, 'sgfs', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -97,8 +107,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2019_10_28_164426_create_maintexts_table', 2),
-(5, '2019_11_06_175551_create_categories_table', 3),
-(6, '2019_11_06_175619_create_products_table', 3);
+(6, '2019_11_06_175619_create_products_table', 3),
+(7, '2019_11_06_175551_create_categories_table', 4);
 
 -- --------------------------------------------------------
 
@@ -212,7 +222,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -230,7 +240,7 @@ ALTER TABLE `maintexts`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `products`
