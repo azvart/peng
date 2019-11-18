@@ -23,7 +23,7 @@
 
 
 
-                 <form class="needs-validation" method='POST' action="{{asset('home')}}">
+                 <form class="needs-validation" method='POST' action="{{asset('home')}} " enctype="multipart/form-data">
                     {!!csrf_field()!!}
 
     <div class="form-group">
@@ -82,8 +82,8 @@
   </div>
 
    <div class="custom-file">
-    <input type="file" class="custom-file-input" id="picture" name='picture'>
-    <label class="custom-file-label" for="picture">Choose file...</label>
+    <input type="file" class="custom-file-input" id="picture1" name='picture1'>
+    <label class="custom-file-label" for="picture1">Choose file...</label>
     <div class="invalid-feedback">Example invalid custom file feedback</div>
   </div>
   <br>

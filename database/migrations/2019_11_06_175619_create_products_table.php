@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('price');
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->string('small_body');
             $table->enum('showhide',['0','1'])->default('1');
             $table->integer('category_id');
