@@ -72,7 +72,7 @@
 </div>
   
   <div class="form-group">
-    <select class="custom-select"name='category' id='category' >
+    <select class="custom-select"name='category_id' id='category_id' >
       <option value="">Open this select menu</option>
       @foreach($cats as $one)
       <option value="{{$one->id}}">{{$one->name}}</option>
@@ -95,7 +95,53 @@
 
 
                 </div>
+   
+
+
+
+
+
+
+
             </div>
+
+     
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Изображение</th>
+      <th scope="col">Наименование</th>
+      <th scope="col">Описание</th>
+      <th scope="col">Цена</th>
+      <th scope='col'>Категория</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($products as $des)
+    <tr>
+      
+      <td>
+@if($des->picture)
+        <img src="{{asset('uploads/'.$des->user_id.'/'.$des->picture)}}" class="card-img-top" alt="...">
+@endif
+      </td>
+       <td>{{$des->name}}</td>
+       <td>{{$des->small_body}}</td>
+       <td>{{$des->price}}</td>
+       <td>{{(isset($des->catalogs->name))?$des->catalogs->name:''}}</td>
+    </tr>
+
+    @endforeach
+  </tbody>
+</table>
+
+
+
+
+
+
+                {!!$products->links()!!}
         </div>
     </div>
 </div>

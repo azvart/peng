@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Ноя 18 2019 г., 20:43
+-- Время создания: Ноя 25 2019 г., 21:13
 -- Версия сервера: 8.0.12
 -- Версия PHP: 7.2.10
 
@@ -149,7 +149,11 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `price`, `body`, `small_body`, `showhide`, `category_id`, `picture`, `user_id`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'vdsvdsabvsbsbs', 'safafasf', NULL, 'avsavsavca', '0', NULL, '', 1, 'new', '2019-11-18 17:23:05', '2019-11-18 17:23:05'),
-(2, 'savca', 'dsvav', NULL, 'avdsav', '0', NULL, '', 1, 'new', '2019-11-18 17:23:46', '2019-11-18 17:23:46');
+(2, 'savca', 'dsvav', NULL, 'avdsav', '0', NULL, '', 1, 'new', '2019-11-18 17:23:46', '2019-11-18 17:23:46'),
+(3, 'Какой-то товар', '200', NULL, 'Описание', '0', NULL, '19_11_25_07_31_45.jpg', 1, 'new', '2019-11-25 16:31:46', '2019-11-25 16:31:46'),
+(4, 'Товар номер 2', '400$', NULL, 'Описание', '0', NULL, '19_11_25_08_24_31.jpg', 1, 'new', '2019-11-25 17:24:31', '2019-11-25 17:24:31'),
+(5, 'Какой-то товар', '500', NULL, 'Описание 3', '0', NULL, '19_11_25_08_26_43.jpg', 1, 'new', '2019-11-25 17:26:43', '2019-11-25 17:26:43'),
+(6, 'vv', 'vvvvv', NULL, 'Описание', '0', 8, '', 1, 'new', '2019-11-25 17:29:20', '2019-11-25 17:29:20');
 
 -- --------------------------------------------------------
 
@@ -254,7 +258,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
