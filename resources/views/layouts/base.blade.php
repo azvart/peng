@@ -23,9 +23,17 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
+ 
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Start Bootstrap </div>
       <div class="list-group list-group-flush">
+   <div class='card'>
+      <div class='card-header'>
+        @foreach($v_categories as $cat)
+        <a href="{{asset('category/'.$cat->id)}}" class='list-group-item'>{{$cat->name}}</a>
+        @endforeach
+      </div>
+    </div>
         <a href="firstarticle" class="list-group-item list-group-item-action bg-light">Main Article</a>
         <a href="secondarticle" class="list-group-item list-group-item-action bg-light">Second</a>
         <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">Third</a>
