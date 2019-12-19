@@ -15,8 +15,9 @@
   <link rel="stylesheet"  href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
 
   <!-- Custom styles for this template -->
-  <link href="css/simple-sidebar.css" rel="stylesheet">
-
+  <link href="{{asset('css/simple-sidebar.css')}}" rel="stylesheet">
+@section('styles')
+@show
 </head>
 
 <body>
@@ -35,8 +36,8 @@
         @endforeach
       </div>
     </div>
-        <a href="firstarticle" class="list-group-item list-group-item-action bg-light">Main Article</a>
-        <a href="secondarticle" class="list-group-item list-group-item-action bg-light">Second</a>
+        <a href="{{asset('home/')}}" class="list-group-item list-group-item-action bg-light">Home</a>
+        <a href="{{asset('category/')}}" class="list-group-item list-group-item-action bg-light">Category</a>
         <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">Third</a>
         <a href="site" class="list-group-item list-group-item-action bg-light">Четвертая статья</a>
         <a href="home" class="list-group-item list-group-item-action bg-light">Home</a>
@@ -49,7 +50,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <button class="btn btn-primary" id="menu-toggle">Закрыть</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -102,8 +103,8 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Menu Toggle Script -->
   <script>

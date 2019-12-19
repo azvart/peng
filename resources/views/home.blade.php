@@ -48,7 +48,7 @@
 
      <div class="form-group">
       <label for="body">Description</label>
-      <input type="text" class="form-control" id="body" placeholder="Description" name='body' >
+      <textarea type="text" class="form-control" id="body" placeholder="Description" name='body' ></textarea>
       @error('body')
                                     <span class="alert alert-danger" role="alert">
                                         <strong>{{ $message }}</strong>
