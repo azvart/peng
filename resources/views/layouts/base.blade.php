@@ -27,7 +27,7 @@
     <!-- Sidebar -->
  
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="sidebar-heading">@lang('base.start') </div>
       <div class="list-group list-group-flush">
    <div class='card'>
       <div class='card-header'>
@@ -36,9 +36,9 @@
         @endforeach
       </div>
     </div>
-        <a href="{{asset('home/')}}" class="list-group-item list-group-item-action bg-light">Home</a>
-        <a href="{{asset('category/')}}" class="list-group-item list-group-item-action bg-light">Category</a>
-        <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">Third</a>
+        <a href="{{asset('home/')}}" class="list-group-item list-group-item-action bg-light">@lang('base.home')</a>
+        <a href="{{asset('category/')}}" class="list-group-item list-group-item-action bg-light">@lang('base.category')</a>
+        <a href="thirdarticle" class="list-group-item list-group-item-action bg-light">@lang('base.third')</a>
         <a href="site" class="list-group-item list-group-item-action bg-light">Четвертая статья</a>
         <a href="home" class="list-group-item list-group-item-action bg-light">Home</a>
         <a href="six" class="list-group-item list-group-item-action bg-light">Status</a>
@@ -50,7 +50,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Закрыть</button>
+        <button class="btn btn-primary" id="menu-toggle">@lang('base.close')</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,17 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
+                    </ul>             
+                    <div class="dropdown">
+  <button class="btn btn-outline-light text-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    @lang('base.language')
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/?lang=ru">RU</a>
+    <a class="dropdown-item" href="/?lang=en">EN</a>
+    <a class="dropdown-item" href="/?lang=jp">JP</a>
+  </div>
+</div>
         </div>
       </nav>
 
