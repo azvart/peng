@@ -25,10 +25,15 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - cd domains
 - git clone + путь с репозитория с сайта(url)
 - перейти в папку с проектом cd localhost
+-открыть консоль openServer именно её.(правой кнопкой на значок дополнительно и консоль(через обычную консоль команды не выполняться))
 - composer self-update
 - composer install
 - скопировать .env.example и превратить его в .env(без этого файла проект не запуститься)
-- 
+- создать базу данных в php my admin
+-в файле .env вписать название баззы данных и порт(3307 вместо 3306) в настройках openServer так же порт изменить с 3306 на 3307
+- выполнить команду php artisan:migrate
+-Зайти на сайт и радоваться=)
+
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
